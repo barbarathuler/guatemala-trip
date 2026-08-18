@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guatemala · 26/12–05/01 · Dossiê da Viagem</title>
+<style>
+  :root{
+    --bg:#f6f1e6;
+    --bg-card:#ffffff;
+    --bg-nav:#efe7d4;
+    --line:#e3d9c2;
+    --text:#2a2318;
+    --text-dim:#8a7f6c;
+    --ember:#c2501f;
+    --ember-tint:#f8e2d3;
+    --ember-dark:#963c15;
+    --gold:#9c701d;
+    --gold-tint:#f4ecd3;
+    --teal:#1f7268;
+    --teal-tint:#dcf0ec;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .display{ font-family:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,serif; }
+  .mono{ font-family:"SF Mono","Consolas","Menlo",monospace; letter-spacing:0.02em; }
+  a{color:var(--ember-dark);}
+
+  .shell{ display:grid; grid-template-columns:220px 1fr; min-height:100vh; }
+  main{min-width:0;}
+  @media (max-width:840px){ .shell{grid-template-columns:1fr;} .nav{position:sticky;top:0;z-index:20;} }
+
+  .nav{ background:var(--bg-nav); border-right:1px solid var(--line); padding:28px 0; }
+  @media (max-width:840px){
+    .nav{ border-right:none; border-bottom:1px solid var(--line); padding:14px 0; overflow-x:auto; white-space:nowrap; }
+  }
+  .nav-brand{
+    padding:0 22px 22px 22px; font-size:12px; text-transform:uppercase; letter-spacing:0.14em;
+    color:var(--text-dim); border-bottom:1px solid var(--line); margin-bottom:14px;
+  }
+  @media (max-width:840px){ .nav-brand{display:none;} }
+  .nav a.item{
+    display:block; padding:10px 22px; color:var(--text-dim); text-decoration:none; font-size:14px;
+    border-left:3px solid transparent;
+  }
+  @media (max-width:840px){ .nav a.item{display:inline-block;padding:8px 16px;border-left:none;border-bottom:3px solid transparent;} }
+  .nav a.item:hover{color:var(--text);}
+  .nav a.item.active{color:var(--ember-dark);border-left-color:var(--ember);background:var(--ember-tint);}
+  @media (max-width:840px){ .nav a.item.active{border-left-color:transparent;border-bottom-color:var(--ember);background:none;} }
+
+  main{padding:0;}
+  section{ padding:56px 40px; max-width:960px; border-bottom:1px solid var(--line); min-width:0; }
+  @media (max-width:600px){ section{padding:36px 20px;} }
+
+  h1,h2,h3{margin:0 0 6px 0;font-weight:600;}
+  .eyebrow{ font-size:12px;text-transform:uppercase;letter-spacing:0.14em; color:var(--gold);margin-bottom:10px;font-family:inherit; }
+  h2{font-size:28px;margin-bottom:18px;}
+  p{color:var(--text-dim);}
+  p.lead{color:var(--text);font-size:17px;}
+
+  .hero{padding:64px 40px 40px 40px;}
+  @media (max-width:600px){ .hero{padding:40px 20px 28px 20px;} }
+  .hero h1{font-size:44px;line-height:1.05;color:var(--text);}
+  @media (max-width:600px){ .hero h1{font-size:32px;} }
+  .hero .dates{font-size:18px;color:var(--gold);margin-bottom:6px;}
+  .countdown{font-size:14px;color:var(--ember-dark);margin-bottom:22px;font-weight:600;}
+  .route-svg{width:100%;max-width:760px;height:auto;margin:26px 0 8px 0;}
+  .pulse{animation:pulse 2.4s ease-in-out infinite;}
+  @media (prefers-reduced-motion:reduce){ .pulse{animation:none;} }
+  @keyframes pulse{ 0%,100%{opacity:1;r:5;} 50%{opacity:0.35;r:8;} }
+  .status-banner{
+    margin-top:26px; background:var(--ember-tint); border:1px solid var(--ember); border-left:4px solid var(--ember);
+    padding:16px 20px; border-radius:4px; font-size:14.5px; color:var(--text);
+  }
+  .status-banner b{color:var(--ember-dark);}
+
+  .card{ background:var(--bg-card); border:1px solid var(--line); border-radius:8px; padding:20px 22px; margin-bottom:16px;
+    box-shadow:0 1px 2px rgba(42,35,24,0.04); }
+  table{width:100%;border-collapse:collapse;font-size:14px;}
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  @media (max-width:640px){ .table-scroll table{min-width:520px;} }
+  th{
+    text-align:left;color:var(--gold);font-weight:600; font-size:12px;text-transform:uppercase;letter-spacing:0.06em;
+    padding:8px 10px;border-bottom:1px solid var(--line);
+  }
+  td{padding:10px 10px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--text);}
+  tr:last-child td{border-bottom:none;}
+  .tag{ display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px; text-transform:uppercase;letter-spacing:0.04em;font-weight:600; }
+  .tag.ok{background:var(--teal-tint);color:var(--teal);}
+  .tag.pending{background:var(--ember-tint);color:var(--ember-dark);}
+  .tag.optA{background:var(--teal-tint);color:var(--teal);}
+  .tag.optB{background:var(--gold-tint);color:var(--gold);}
+
+  .toggle{display:flex;gap:8px;margin-bottom:20px;}
+  .toggle button{
+    flex:1;padding:12px 16px;border-radius:6px;border:1px solid var(--line);
+    background:var(--bg-card);color:var(--text-dim);font-size:14px;cursor:pointer; font-family:inherit;text-align:left;
+  }
+  .toggle button b{display:block;color:var(--text);font-size:15px;margin-bottom:2px;}
+  .toggle button.active{border-color:var(--ember);background:var(--ember-tint);}
+  .toggle button.active b{color:var(--ember-dark);}
+  .roteiro-panel{display:none;}
+  .roteiro-panel.active{display:block;}
+
+  .check-item{ display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--line); }
+  .check-item:last-child{border-bottom:none;}
+  .check-item input{margin-top:3px;width:16px;height:16px;accent-color:var(--ember);flex-shrink:0;}
+  .check-item label{font-size:14.5px;color:var(--text);cursor:pointer;}
+  .check-item .note{display:block;color:var(--text-dim);font-size:13px;margin-top:2px;}
+  .check-item.done label{color:var(--text-dim);text-decoration:line-through;}
+
+  .contact-row{ display:flex;justify-content:space-between;align-items:center;gap:12px; padding:14px 0;border-bottom:1px solid var(--line); }
+  .contact-row:last-child{border-bottom:none;}
+  .contact-row .who{font-size:15px;color:var(--text);}
+  .contact-row .who .role{display:block;color:var(--text-dim);font-size:12.5px;margin-top:2px;}
+  .wa-btn{ background:var(--teal);color:#fff;text-decoration:none;font-size:13px;font-weight:600; padding:8px 14px;border-radius:20px;white-space:nowrap; }
+
+  .subtle-note{font-size:13px;color:var(--text-dim);font-style:italic;margin-top:10px;}
+  ul.plain{padding-left:18px;margin:8px 0;color:var(--text);}
+  ul.plain li{margin-bottom:6px;}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media (max-width:640px){ .grid-2{grid-template-columns:1fr;} }
+
+  .vote-btn{
+    flex:1;padding:10px 14px;border-radius:6px;border:1px solid var(--line);
+    background:var(--bg);color:var(--text);font-size:14px;cursor:pointer;font-family:inherit;
+  }
+  .vote-btn:hover{border-color:var(--ember);}
+  .vote-btn.voted{border-color:var(--teal);background:var(--teal-tint);color:var(--teal);font-weight:600;}
+
+  /* Cost table with editable inputs */
+  .cost-input{
+    width:110px;padding:6px 8px;border-radius:5px;border:1px solid var(--line);
+    background:var(--bg);color:var(--text);font-family:inherit;font-size:13.5px;
+  }
+  .cost-input:focus{outline:2px solid var(--ember);outline-offset:1px;}
+  .total-card{
+    background:var(--gold-tint);border:1px solid var(--gold);border-radius:8px;padding:22px;margin-top:8px;
+  }
+  .total-row{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0;}
+  .total-row.grand{border-top:1px solid var(--gold);margin-top:8px;padding-top:14px;font-size:19px;font-weight:700;color:var(--ember-dark);}
+
+  /* Checklist docs grid */
+  .docs-grid{width:100%;border-collapse:collapse;font-size:13.5px;}
+  .docs-grid th{text-align:center;padding:8px 6px;}
+  .docs-grid td{text-align:center;padding:10px 6px;}
+  .docs-grid td.doc-label{text-align:left;font-size:14px;color:var(--text);}
+  .docs-grid input[type=checkbox]{width:17px;height:17px;accent-color:var(--teal);cursor:pointer;}
+
+  /* Comments */
+  .comment-form{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap;}
+  .comment-form select{
+    padding:8px 10px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--text);font-family:inherit;font-size:14px;
+  }
+  .comment-form textarea{
+    flex:1;min-width:200px;padding:8px 10px;border-radius:6px;border:1px solid var(--line);background:var(--bg);
+    color:var(--text);font-family:inherit;font-size:14px;resize:vertical;min-height:40px;
+  }
+  .comment-form button{
+    padding:8px 16px;border-radius:6px;border:none;background:var(--ember);color:#fff;font-weight:600;font-size:14px;cursor:pointer;
+  }
+  .comment-item{padding:12px 0;border-bottom:1px solid var(--line);}
+  .comment-item:last-child{border-bottom:none;}
+  .comment-item .meta{font-size:12.5px;color:var(--text-dim);margin-bottom:3px;}
+  .comment-item .meta b{color:var(--ember-dark);}
+  .comment-item .text{font-size:14.5px;color:var(--text);white-space:pre-wrap;}
+  .avatar-tag{
+    display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;
+    background:var(--teal-tint);color:var(--teal);margin-right:6px;
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <nav class="nav">
+    <div class="nav-brand">Guatemala · Dossiê</div>
+    <a class="item" data-target="overview" href="#overview">Visão geral</a>
+    <a class="item" data-target="roteiro" href="#roteiro">Roteiro</a>
+    <a class="item" data-target="custos" href="#custos">Custos</a>
+    <a class="item" data-target="hospedagem" href="#hospedagem">Hospedagem</a>
+    <a class="item" data-target="checklist" href="#checklist">Checklist</a>
+    <a class="item" data-target="comentarios" href="#comentarios">Comentários</a>
+    <a class="item" data-target="contatos" href="#contatos">Contatos</a>
+  </nav>
+
+  <main>
+
+    <div id="firebase-setup-banner" style="display:none;background:#fbeee0;border-bottom:2px solid var(--ember);padding:14px 20px;font-size:14px;color:var(--text);">
+      ⚠️ <b>Firebase ainda não configurado.</b>
+    </div>
+
+    <!-- ===================== HERO / OVERVIEW ===================== -->
+    <section id="overview" class="hero">
+      <div class="eyebrow display">Dossiê de viagem &middot; 2 casais</div>
+      <h1 class="display">Guatemala</h1>
+      <div class="dates mono">26 DEZ &mdash; 05 JAN &middot; 10 noites</div>
+      <div class="countdown" id="countdown"></div>
+
+      <svg class="route-svg" viewBox="0 0 760 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="30" y1="45" x2="730" y2="45" stroke="#d8cdb2" stroke-width="2" stroke-dasharray="1,7" stroke-linecap="round"/>
+        <circle cx="30" cy="45" r="5" fill="#9c701d"/>
+        <text x="30" y="70" fill="#8a7f6c" font-size="12" text-anchor="middle" font-family="Georgia, serif">Antígua</text>
+        <circle cx="220" cy="45" r="5" fill="#1f7268"/>
+        <text x="220" y="70" fill="#8a7f6c" font-size="12" text-anchor="middle" font-family="Georgia, serif">Atitlán</text>
+        <circle class="pulse" cx="410" cy="45" r="5" fill="#c2501f"/>
+        <text x="410" y="70" fill="#8a7f6c" font-size="12" text-anchor="middle" font-family="Georgia, serif">Acatenango</text>
+        <circle cx="600" cy="45" r="5" fill="#9c701d"/>
+        <text x="600" y="70" fill="#8a7f6c" font-size="12" text-anchor="middle" font-family="Georgia, serif">Antígua (Réveillon)</text>
+        <circle cx="730" cy="45" r="5" fill="#1f7268"/>
+        <text x="730" y="70" fill="#8a7f6c" font-size="12" text-anchor="middle" font-family="Georgia, serif">Tikal / Semuc</text>
+      </svg>
+
+      <p class="lead">Chegada 01:40h (26/12) &middot; Embarque de volta 07:19h (05/01). Ritmo equilibrado, misturando natureza/aventura e cultura maia, sem abrir mão do Acatenango nem do Réveillon em Antígua.</p>
+
+      <div class="status-banner">
+        <b>Decisão pendente:</b> Opção A (Tikal completo) vs Opção B (com Semuc Champey). Ver comparativo na aba <a href="#roteiro">Roteiro</a>. Acatenango confirmado para 29&ndash;30/12, operadora ainda em cotação.
+      </div>
+
+      <div class="card" style="margin-top:20px;">
+        <h3 style="font-size:15px;color:var(--text);">Bom saber</h3>
+        <ul class="plain" style="margin-top:8px;">
+          <li>Fuso horário: Guatemala é GMT-6 o ano todo (não tem horário de verão).</li>
+          <li>Clima em dezembro/janeiro: estação seca. Dias ~24-27°C, noites amenas nas cidades — mas no acampamento do Acatenango (3.750m) pode chegar perto de 0°C.</li>
+          <li>Moeda: Quetzal (GTQ). Cartão aceito em áreas turísticas; leve dinheiro vivo para mercados e vans.</li>
+          <li>Tomadas: iguais ao Brasil em formato (tipo A/B), 120V — leve adaptador se seus aparelhos forem 220V apenas.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== ROTEIRO ===================== -->
+    <section id="roteiro">
+      <div class="eyebrow">Itinerário</div>
+      <h2>Roteiro dia a dia</h2>
+      <p>Os primeiros 6 dias são idênticos nas duas opções. A partir de 1º de janeiro elas se separam.</p>
+
+      <div class="card" id="vote-card">
+        <h3 style="font-size:15px;color:var(--text);margin-bottom:10px;">Votação do grupo &mdash; qual roteiro?</h3>
+        <div style="display:flex;gap:8px;margin-bottom:12px;align-items:center;flex-wrap:wrap;">
+          <label style="font-size:13.5px;color:var(--text-dim);">Quem está votando:</label>
+          <select id="vote-person-select"></select>
+        </div>
+        <div style="display:flex;gap:10px;margin-bottom:14px;">
+          <button id="vote-a" class="vote-btn">Voto Opção A</button>
+          <button id="vote-b" class="vote-btn">Voto Opção B</button>
+        </div>
+        <div id="vote-tally" class="mono" style="font-size:14px;color:var(--text-dim);">Carregando votos...</div>
+        <div id="vote-names" style="margin-top:8px;font-size:13.5px;color:var(--text-dim);"></div>
+        <p class="subtle-note" style="margin-top:8px;">Cada pessoa vota uma vez (escolhendo o próprio nome acima). Votar de novo troca seu voto anterior.</p>
+        <button id="vote-reset" style="margin-top:12px;background:none;border:1px solid var(--line);color:var(--text-dim);font-size:12.5px;padding:6px 12px;border-radius:14px;cursor:pointer;">Zerar votos do grupo</button>
+      </div>
+
+      <div class="toggle">
+        <button class="opt-btn active" data-opt="a"><b>Opção A</b>Tikal completo, com dia de buffer antes do voo</button>
+        <button class="opt-btn" data-opt="b"><b>Opção B</b>Com Semuc Champey, Tikal em meio dia</button>
+      </div>
+
+      <div class="card">
+        <table>
+          <tr><th>Data</th><th>Base</th><th>O que rola</th></tr>
+          <tr><td class="mono">26/12 Sáb</td><td>Antígua</td><td>Chegada 01:40h, traslado, descanso, tarde leve na cidade colonial.</td></tr>
+          <tr><td class="mono">27/12 Dom</td><td>Atitlán</td><td>Manhã: mercado de Chichicastenango. Tarde: viagem ao lago, chegada ao pôr do sol.</td></tr>
+          <tr><td class="mono">28/12 Seg</td><td>Atitlán</td><td>Lancha pelos povoados: San Juan La Laguna, San Pedro, Santiago Atitlán.</td></tr>
+          <tr><td class="mono">29/12 Ter</td><td>Acatenango</td><td>Manhã: retorno a Antígua (~3h). Tarde: subida do vulcão, acampamento à noite.</td></tr>
+          <tr><td class="mono">30/12 Qua</td><td>Antígua</td><td>Nascer do sol no cume, descida, banho quente, tarde 100% de descanso.</td></tr>
+          <tr><td class="mono">31/12 Qui</td><td>Antígua</td><td>Dia leve (fazenda de café, compras) + <b>Réveillon em Antígua</b> à noite.</td></tr>
+        </table>
+      </div>
+
+      <div class="roteiro-panel active" id="panel-a">
+        <div class="card">
+          <table>
+            <tr><th>Data</th><th>Base</th><th>O que rola</th></tr>
+            <tr><td class="mono">01/01 Sex</td><td>Flores/Tikal</td><td>Manhã livre em Antígua (pós-festa). Voo doméstico à tarde para Flores.</td></tr>
+            <tr><td class="mono">02/01 Sáb</td><td>Flores/Tikal</td><td>Dia completo em Tikal &mdash; nascer do sol no Templo IV + exploração total do parque.</td></tr>
+            <tr><td class="mono">03/01 Dom</td><td>Cid. Guatemala</td><td>Manhã opcional: Yaxhá ou lago Petén Itzá. Voo de volta à tarde/noite.</td></tr>
+            <tr><td class="mono">04/01 Seg</td><td>Cid. Guatemala</td><td>Dia de folga/buffer perto do aeroporto (ou city tour rápido).</td></tr>
+            <tr><td class="mono">05/01 Ter</td><td>&mdash;</td><td>Embarque 07:19h.</td></tr>
+          </table>
+        </div>
+        <p class="subtle-note">Ganha: Tikal sem pressa + dia de buffer antes do voo. Perde: as piscinas de Semuc Champey ficam de fora.</p>
+      </div>
+
+      <div class="roteiro-panel" id="panel-b">
+        <div class="card">
+          <table>
+            <tr><th>Data</th><th>Base</th><th>O que rola</th></tr>
+            <tr><td class="mono">01/01 Sex</td><td>Semuc Champey</td><td>Viagem por estrada Antígua → Lanquín (~5-6h). Chegada à tarde/noite.</td></tr>
+            <tr><td class="mono">02/01 Sáb</td><td>Semuc Champey</td><td>Dia inteiro: piscinas turquesa, mirante, tubing/grutas.</td></tr>
+            <tr><td class="mono">03/01 Dom</td><td>Flores</td><td>Viagem por estrada Lanquín → Flores (~5-6h).</td></tr>
+            <tr><td class="mono">04/01 Seg</td><td>Cid. Guatemala</td><td>Madrugada: Tikal (nascer do sol + templos principais, ~5h). Voo Flores→Guatemala à tarde, pernoite perto do aeroporto.</td></tr>
+            <tr><td class="mono">05/01 Ter</td><td>&mdash;</td><td>Embarque 07:19h.</td></tr>
+          </table>
+        </div>
+        <p class="subtle-note">Ganha: 2 dias completos no Semuc Champey. Perde: Tikal vira meio-dia corrido, sem dia de buffer antes do voo, e dois trajetos longos de estrada seguidos.</p>
+      </div>
+    </section>
+
+    <!-- ===================== CUSTOS ===================== -->
+    <section id="custos">
+      <div class="eyebrow">Orçamento</div>
+      <h2>Custos da viagem</h2>
+      <p>Preencha o campo "custo total (grupo)" conforme forem fechando cada item — qualquer um dos 4 pode editar, e o total por casal é calculado sozinho. Itens marcados <span class="tag optA">Opção A</span> ou <span class="tag optB">Opção B</span> só valem se aquele roteiro for o escolhido — não contem os dois ao mesmo tempo na hora de decidir o orçamento final. Passagens internacionais ficam de fora, já que cada um comprou a sua separadamente.</p>
+
+      <div class="card">
+        <table>
+          <thead><tr><th>Item</th><th>Custo total (grupo, US$)</th><th>Por casal</th></tr></thead>
+          <tbody id="cost-table-body"><!-- populated by JS --></tbody>
+        </table>
+      </div>
+
+      <div class="total-card">
+        <div class="total-row"><span>Total do grupo (4 pessoas)</span><span class="mono" id="total-grupo">US$ 0</span></div>
+        <div class="total-row grand"><span>Total por casal</span><span class="mono" id="total-casal">US$ 0</span></div>
+        <p class="subtle-note" style="margin-top:10px;">Itens ainda em branco não entram na soma — preencha assim que tiver a cotação real.</p>
+      </div>
+    </section>
+
+    <!-- ===================== HOSPEDAGEM ===================== -->
+    <section id="hospedagem">
+      <div class="eyebrow">Onde ficar</div>
+      <h2>Hospedagem sugerida por base</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 style="font-size:16px;color:var(--text);">Antígua (5 noites)</h3>
+          <ul class="plain">
+            <li>Hotel Museo Spa Casa Santo Domingo &mdash; icônico, spa completo (mas reviews recentes de serviço em queda)</li>
+            <li>Meson Panza Verde &mdash; boutique, charme colonial</li>
+            <li>Camino Real Antigua &mdash; boutique, bem localizado</li>
+            <li>El Convento / Posada del Ángel &mdash; opção mais em conta</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="font-size:16px;color:var(--text);">Lago Atitlán (2 noites)</h3>
+          <ul class="plain">
+            <li>Hotel Atitlán (Panajachel) &mdash; hacienda à beira do lago, acesso fácil por estrada</li>
+            <li>Alternativa em San Marcos La Laguna se topam traslado de lancha</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="font-size:16px;color:var(--text);">Flores / Tikal</h3>
+          <ul class="plain">
+            <li>Jungle Lodge Hotel &mdash; dentro do parque, essencial para o nascer do sol sem madrugar em transfer</li>
+            <li>Hotel Tikal Inn &mdash; alternativa dentro do parque</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="font-size:16px;color:var(--text);">Lanquín (Opção B, 2 noites)</h3>
+          <ul class="plain">
+            <li>Utopia Eco Hotel &mdash; vista pro rio, acesso a pé às piscinas</li>
+            <li>Zephyr Lodge &mdash; bem avaliado, mesma região</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <h3 style="font-size:16px;color:var(--text);">Cidade da Guatemala (pernoite antes do voo)</h3>
+        <ul class="plain">
+          <li>Hilton Garden Inn Guatemala City &mdash; 5-10min do aeroporto La Aurora</li>
+          <li>Barceló Guatemala City &mdash; mesma região</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== CHECKLIST ===================== -->
+    <section id="checklist">
+      <div class="eyebrow">Preparação</div>
+      <h2>Checklist antes da viagem</h2>
+
+      <h3 style="font-size:16px;color:var(--text);margin-top:6px;">Documentos individuais</h3>
+      <p class="subtle-note" id="sync-status-docs">Sincronizando...</p>
+      <div class="card">
+        <table class="docs-grid" id="docs-table">
+          <!-- populated by JS -->
+        </table>
+      </div>
+
+      <h3 style="font-size:16px;color:var(--text);margin-top:26px;">Reservas e pendências do grupo</h3>
+      <p class="subtle-note" id="sync-status">Sincronizando...</p>
+      <div class="card" id="checklist-card">
+        <!-- populated by JS -->
+      </div>
+
+      <h3 style="font-size:16px;color:var(--text);margin-top:26px;">O que levar</h3>
+      <div class="card">
+        <ul class="plain">
+          <li>Roupas em camadas para o Acatenango: térmica, fleece/casaco corta-vento, gorro e luvas (a operadora empresta parte disso)</li>
+          <li>Tênis de trilha ou bota confortável já usada antes (não estreie no Acatenango)</li>
+          <li>Protetor solar, chapéu/boné e óculos de sol (altitude + sol forte de dia)</li>
+          <li>Roupa leve para o restante da viagem (calor em Antígua, Atitlán, Tikal)</li>
+          <li>Dinheiro vivo em Quetzales para mercados e vans</li>
+          <li>Repelente (mais importante em Tikal/Petén e Semuc Champey)</li>
+          <li>Power bank e adaptador de tomada se necessário</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== COMENTÁRIOS ===================== -->
+    <section id="comentarios">
+      <div class="eyebrow">Mural do grupo</div>
+      <h2>Comentários</h2>
+      <p>Espaço livre para recados, dúvidas ou "olha isso que achei" — visível para todo mundo.</p>
+
+      <div class="card">
+        <div class="comment-form">
+          <select id="comment-author">
+            <option value="Bárbara">Bárbara</option>
+            <option value="Bruno">Bruno</option>
+            <option value="Clarissa">Clarissa</option>
+            <option value="Guilherme">Guilherme</option>
+          </select>
+          <textarea id="comment-text" placeholder="Escreva um comentário..."></textarea>
+          <button id="comment-submit">Adicionar</button>
+        </div>
+        <div id="comments-list"><!-- populated by JS --></div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTATOS ===================== -->
+    <section id="contatos" style="border-bottom:none;">
+      <div class="eyebrow">Contatos</div>
+      <h2>WhatsApp das empresas</h2>
+
+      <div class="card">
+        <div class="contact-row">
+          <div class="who">Atitrans <span class="role">Transfers Antígua ⇄ Atitlán ⇄ Aeroporto</span></div>
+          <a class="wa-btn" href="https://wa.me/50242911919" target="_blank" rel="noopener">+502 4291 1919</a>
+        </div>
+        <div class="contact-row">
+          <div class="who">GuateGo <span class="role">Shuttle Antígua → Lanquín (Opção B)</span></div>
+          <a class="wa-btn" href="https://wa.me/50254320541" target="_blank" rel="noopener">+502 5432 0541</a>
+        </div>
+        <div class="contact-row">
+          <div class="who">Tikal Expedition <span class="role">Transfer Lanquín → Flores / local em Tikal</span></div>
+          <a class="wa-btn" href="https://wa.me/50250865640" target="_blank" rel="noopener">+502 5086 5640</a>
+        </div>
+        <div class="contact-row">
+          <div class="who">OX Expeditions <span class="role">Acatenango Overnight</span></div>
+          <a class="wa-btn" href="https://wa.me/50237270652" target="_blank" rel="noopener">+502 3727 0652</a>
+        </div>
+        <div class="contact-row">
+          <div class="who">Trek Guatemala <span class="role">Acatenango Overnight (Glamping/Cabins)</span></div>
+          <a class="wa-btn" href="https://wa.me/50248886315" target="_blank" rel="noopener">+502 4888 6315</a>
+        </div>
+      </div>
+      <p class="subtle-note">Toque no número para abrir a conversa direto no WhatsApp.</p>
+
+      <h3 style="font-size:16px;color:var(--text);margin-top:26px;">Emergência</h3>
+      <div class="card">
+        <ul class="plain">
+          <li><b>Emergência geral na Guatemala:</b> 911 (polícia, bombeiros, ambulância)</li>
+          <li><b>Embaixada do Brasil na Guatemala:</b> confirmar telefone/endereço atual em gov.br/mre antes da viagem</li>
+          <li><b>Seguro viagem:</b> anote aqui o telefone de assistência 24h assim que contratarem</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script>
+  // Nav active state on scroll
+  const sections = document.querySelectorAll('main section[id]');
+  const navLinks = document.querySelectorAll('.nav a.item');
+  function onScroll(){
+    let current = sections[0].id;
+    sections.forEach(sec=>{
+      const rect = sec.getBoundingClientRect();
+      if(rect.top <= 120) current = sec.id;
+    });
+    navLinks.forEach(l=>l.classList.toggle('active', l.dataset.target === current));
+  }
+  document.addEventListener('scroll', onScroll);
+  onScroll();
+
+  // Wrap tables for horizontal scroll on mobile
+  document.querySelectorAll('main table').forEach(t=>{
+    if(t.parentElement.classList.contains('table-scroll')) return;
+    const wrap = document.createElement('div');
+    wrap.className = 'table-scroll';
+    t.parentNode.insertBefore(wrap, t);
+    wrap.appendChild(t);
+  });
+
+  // Countdown
+  (function(){
+    const tripDate = new Date('2026-12-26T00:00:00-06:00');
+    const now = new Date();
+    const diffMs = tripDate - now;
+    const days = Math.ceil(diffMs / (1000*60*60*24));
+    const el = document.getElementById('countdown');
+    el.textContent = days > 0 ? `Faltam ${days} dias para a viagem` : (days === 0 ? 'É hoje!' : 'Viagem já em andamento ou concluída');
+  })();
+
+  // Roteiro toggle
+  document.querySelectorAll('.opt-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.opt-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.roteiro-panel').forEach(p=>p.classList.remove('active'));
+      document.getElementById('panel-' + btn.dataset.opt).classList.add('active');
+    });
+  });
+
+  // ============================================================
+  // COLE AQUI AS CHAVES DO SEU PROJETO FIREBASE (passo 5 do setup)
+  // ============================================================
+  const firebaseConfig = {
+    apiKey: "AIzaSyBrvmGOSbYuceybCxSdeGGFqf84k-BfmSk",
+    authDomain: "guatemala-trip.firebaseapp.com",
+    databaseURL: "https://guatemala-trip-default-rtdb.firebaseio.com",
+    projectId: "guatemala-trip",
+  };
+  // ============================================================
+
+  const firebaseConfigured = !String(firebaseConfig.apiKey).includes('YOUR_API_KEY')
+                            && !String(firebaseConfig.databaseURL).includes('YOUR_PROJECT');
+
+  const banner = document.getElementById('firebase-setup-banner');
+  function showBanner(html){ banner.innerHTML = html; banner.style.display = 'block'; }
+
+  let db = null;
+  if(!firebaseConfigured){
+    showBanner('⚠️ <b>Firebase ainda não configurado.</b> Cole as chaves do seu projeto na constante <code>firebaseConfig</code>.');
+  } else if(typeof firebase === 'undefined'){
+    showBanner('⚠️ <b>O SDK do Firebase não carregou.</b> Verifique sua conexão com a internet ou desative bloqueadores de anúncio/rastreamento, depois recarregue.');
+  } else {
+    try{
+      firebase.initializeApp(firebaseConfig);
+      db = firebase.database();
+      db.ref('.info/connected').on('value', snap=>{
+        banner.style.display = (snap.val() === true) ? 'none' : 'block';
+        if(snap.val() !== true) showBanner('⚠️ <b>Conectando ao Firebase...</b> Se não sumir em segundos, veja o Console (F12) para o erro.');
+      });
+    }catch(e){
+      showBanner('⚠️ <b>Erro ao iniciar o Firebase:</b> ' + e.message);
+      db = null;
+    }
+  }
+
+  function getDeviceId(){
+    let id = localStorage.getItem('gt-device-id');
+    if(!id){ id = 'p' + Math.random().toString(36).slice(2,10); localStorage.setItem('gt-device-id', id); }
+    return id;
+  }
+  const deviceId = getDeviceId();
+  const PEOPLE = [
+    {key:'barbara', name:'Bárbara'},
+    {key:'bruno', name:'Bruno'},
+    {key:'clarissa', name:'Clarissa'},
+    {key:'guilherme', name:'Guilherme'},
+  ];
+
+  // ---------- Group bookings checklist ----------
+  const CHECKLIST_ITEMS = [
+    {id:'c6', label:'Decidir Opção A vs B com o outro casal'},
+    {id:'c7', label:'Fechar operadora do Acatenango', note:'OX Expeditions ou Trek Guatemala — aguardando resposta de disponibilidade'},
+    {id:'c8', label:'Reservar hotel do Réveillon em Antígua', note:'Lota rápido na alta temporada'},
+    {id:'c9', label:'Reservar voo doméstico GUA ⇄ Flores', note:'tagairlines.com ou Avianca'},
+    {id:'c9b', label:'Reservar voos internacionais BR ⇄ Guatemala'},
+    {id:'c10', label:'Confirmar transfers com Atitrans / GuateGo / Tikal Expedition'},
+    {id:'c11', label:'Reservar hotéis (Antígua, Atitlán, Flores/Tikal, Cidade da Guatemala)'},
+    {id:'c12', label:'Reservar jantar de Réveillon (Café Sky ou Hotel Soleil Antigua)'},
+    {id:'c13', label:'Verificar situação do "Estado de Prevenção" mais perto da data'},
+  ];
+
+  function renderChecklist(states){
+    const card = document.getElementById('checklist-card');
+    card.innerHTML = '';
+    CHECKLIST_ITEMS.forEach(item=>{
+      const checked = !!states[item.id];
+      const row = document.createElement('div');
+      row.className = 'check-item' + (checked ? ' done' : '');
+      row.innerHTML = `<input type="checkbox" id="${item.id}" ${checked ? 'checked' : ''}>
+        <label for="${item.id}">${item.label}${item.note ? `<span class="note">${item.note}</span>` : ''}</label>`;
+      row.querySelector('input').addEventListener('change', e => toggleChecklistItem(item.id, e.target.checked, row));
+      card.appendChild(row);
+    });
+  }
+  function toggleChecklistItem(id, checked, row){
+    row.classList.toggle('done', checked);
+    if(db) db.ref('checklist/' + id).set(checked).catch(console.error);
+    else localStorage.setItem('gt-trip-' + id, checked ? '1':'0');
+  }
+  function initChecklist(){
+    const statusEl = document.getElementById('sync-status');
+    if(db){
+      db.ref('checklist').on('value', snap=>{
+        renderChecklist(snap.val() || {});
+        statusEl.textContent = 'Sincronizado em tempo real via Firebase.';
+      }, err=>{ statusEl.textContent = 'Erro: ' + err.message; });
+    } else {
+      const states = {};
+      CHECKLIST_ITEMS.forEach(item=> states[item.id] = localStorage.getItem('gt-trip-' + item.id) === '1');
+      renderChecklist(states);
+      statusEl.textContent = 'Firebase não configurado — salvo só neste dispositivo.';
+    }
+  }
+
+  // ---------- Individual documents grid ----------
+  const DOC_ITEMS = [
+    {id:'passaporte', label:'Passaporte válido (6+ meses)'},
+    {id:'ca4', label:'Declaração CA-4 preenchida'},
+    {id:'febre_amarela', label:'Certificado febre amarela'},
+    {id:'seguro', label:'Seguro viagem contratado'},
+  ];
+  function renderDocs(states){
+    const table = document.getElementById('docs-table');
+    let html = '<tr><th style="text-align:left;">Documento</th>' + PEOPLE.map(p=>`<th>${p.name}</th>`).join('') + '</tr>';
+    DOC_ITEMS.forEach(doc=>{
+      html += `<tr><td class="doc-label">${doc.label}</td>`;
+      PEOPLE.forEach(p=>{
+        const checked = states[doc.id] && states[doc.id][p.key];
+        html += `<td><input type="checkbox" data-doc="${doc.id}" data-person="${p.key}" ${checked ? 'checked':''}></td>`;
+      });
+      html += '</tr>';
+    });
+    table.innerHTML = html;
+    table.querySelectorAll('input[type=checkbox]').forEach(cb=>{
+      cb.addEventListener('change', e=>{
+        const docId = e.target.dataset.doc, person = e.target.dataset.person, checked = e.target.checked;
+        if(db) db.ref(`docs/${docId}/${person}`).set(checked).catch(console.error);
+        else localStorage.setItem(`gt-doc-${docId}-${person}`, checked ? '1':'0');
+      });
+    });
+  }
+  function initDocs(){
+    const statusEl = document.getElementById('sync-status-docs');
+    if(db){
+      db.ref('docs').on('value', snap=>{
+        renderDocs(snap.val() || {});
+        statusEl.textContent = 'Sincronizado em tempo real via Firebase.';
+      }, err=>{ statusEl.textContent = 'Erro: ' + err.message; });
+    } else {
+      const states = {};
+      DOC_ITEMS.forEach(doc=>{
+        states[doc.id] = {};
+        PEOPLE.forEach(p=> states[doc.id][p.key] = localStorage.getItem(`gt-doc-${doc.id}-${p.key}`) === '1');
+      });
+      renderDocs(states);
+      statusEl.textContent = 'Firebase não configurado — salvo só neste dispositivo.';
+    }
+  }
+
+  // ---------- Voting ----------
+  const voteSelect = document.getElementById('vote-person-select');
+  voteSelect.innerHTML = PEOPLE.map(p=>`<option value="${p.key}">${p.name}</option>`).join('');
+  const savedName = localStorage.getItem('gt-my-name');
+  if(savedName) voteSelect.value = savedName;
+  voteSelect.addEventListener('change', ()=> localStorage.setItem('gt-my-name', voteSelect.value));
+
+  function castVote(choice){
+    const personKey = voteSelect.value;
+    if(db) db.ref('votes/' + personKey).set(choice).catch(console.error);
+    else { localStorage.setItem('gt-vote-' + personKey, choice); renderVoteFallback(); }
+  }
+  function renderVoteFallback(){
+    let a = [], b = [];
+    PEOPLE.forEach(p=>{
+      const v = localStorage.getItem('gt-vote-' + p.key);
+      if(v === 'a') a.push(p.name);
+      if(v === 'b') b.push(p.name);
+    });
+    document.getElementById('vote-tally').textContent = `Opção A: ${a.length} voto(s)  ·  Opção B: ${b.length} voto(s)`;
+    document.getElementById('vote-names').innerHTML = `<b>A:</b> ${a.join(', ') || '—'} &nbsp;&nbsp; <b>B:</b> ${b.join(', ') || '—'}`;
+  }
+  function initVoting(){
+    if(db){
+      db.ref('votes').on('value', snap=>{
+        const votes = snap.val() || {};
+        let a = [], b = [];
+        PEOPLE.forEach(p=>{
+          const v = votes[p.key];
+          if(v === 'a') a.push(p.name);
+          if(v === 'b') b.push(p.name);
+        });
+        document.getElementById('vote-tally').textContent = `Opção A: ${a.length} voto(s)  ·  Opção B: ${b.length} voto(s)`;
+        document.getElementById('vote-names').innerHTML = `<b>A:</b> ${a.join(', ') || '—'} &nbsp;&nbsp; <b>B:</b> ${b.join(', ') || '—'}`;
+      }, err=>{ document.getElementById('vote-tally').textContent = 'Erro: ' + err.message; });
+    } else renderVoteFallback();
+  }
+  document.getElementById('vote-a').addEventListener('click', ()=>castVote('a'));
+  document.getElementById('vote-b').addEventListener('click', ()=>castVote('b'));
+  document.getElementById('vote-reset').addEventListener('click', ()=>{
+    if(!confirm('Zerar todos os votos do grupo? Isso não pode ser desfeito.')) return;
+    if(db) db.ref('votes').remove().catch(console.error);
+    else { PEOPLE.forEach(p=> localStorage.removeItem('gt-vote-' + p.key)); renderVoteFallback(); }
+  });
+
+  // ---------- Costs ----------
+  const COST_ITEMS = [
+    {id:'acatenango', label:'Acatenango (operadora escolhida)', note:'OX ~US$476 ou Trek Guatemala ~US$916 (grupo)', group:'Passeios'},
+    {id:'lancha_atitlan', label:'Lancha pelos povoados do Atitlán', note:'San Juan La Laguna, San Pedro, Santiago Atitlán', group:'Passeios'},
+    {id:'ingressos', label:'Ingressos e taxas de parques', note:'Tikal ~US$20-30pp, Semuc ~US$5pp', group:'Passeios'},
+    {id:'reveillon_jantar', label:'Jantar de Réveillon', note:'Café Sky ou Hotel Soleil Antigua', group:'Passeios'},
+    {id:'yaxha', label:'Yaxhá (passeio opcional)', tag:'A', group:'Passeios'},
+
+    {id:'voo_domestico', label:'Voos domésticos GUA ⇄ Flores (4 pax)', note:'US$92–193/trecho, ida+volta', group:'Logística'},
+    {id:'transfer_gua_antigua', label:'Transfer: Aeroporto GUA → Antígua', group:'Logística'},
+    {id:'transfer_antigua_atitlan', label:'Transfer: Antígua → Chichicastenango → Atitlán', group:'Logística'},
+    {id:'transfer_atitlan_antigua', label:'Transfer: Atitlán → Antígua', group:'Logística'},
+    {id:'transfer_b_antigua_lanquin', label:'Transfer: Antígua → Lanquín', tag:'B', group:'Logística'},
+    {id:'transfer_b_lanquin_flores', label:'Transfer: Lanquín → Flores', tag:'B', group:'Logística'},
+    {id:'transfer_a_antigua_gua', label:'Transfer: Antígua → Aeroporto GUA + pernoite', tag:'A', group:'Logística'},
+
+    {id:'hotel_antigua', label:'Hotel Antígua (5 noites, 2 casais)', group:'Hospedagem'},
+    {id:'hotel_atitlan', label:'Hotel Atitlán (2 noites, 2 casais)', group:'Hospedagem'},
+    {id:'hotel_flores_a', label:'Hotel Flores/Tikal (2 noites)', tag:'A', group:'Hospedagem'},
+    {id:'hotel_flores_b', label:'Hotel Flores/Tikal (1 noite)', tag:'B', group:'Hospedagem'},
+    {id:'hotel_lanquin', label:'Hotel Lanquín (2 noites)', tag:'B', group:'Hospedagem'},
+    {id:'hotel_gua_city', label:'Hotel Cidade da Guatemala (pernoite aeroporto)', group:'Hospedagem'},
+
+    {id:'seguro', label:'Seguro viagem (4 pessoas)', group:'Outros'},
+    {id:'alimentacao', label:'Alimentação estimada (10 dias, 4 pessoas)', note:'sugestão US$25-40pp/dia', group:'Outros'},
+    {id:'gorjetas', label:'Gorjetas (guias, motoristas)', group:'Outros'},
+    {id:'cambio', label:'Câmbio / IOF cartão internacional', note:'~1,1% IOF + spread do cartão', group:'Outros'},
+  ];
+  function renderCostTable(values){
+    const body = document.getElementById('cost-table-body');
+    body.innerHTML = '';
+    let lastGroup = null;
+    COST_ITEMS.forEach(item=>{
+      if(item.group !== lastGroup){
+        lastGroup = item.group;
+        const groupRow = document.createElement('tr');
+        groupRow.innerHTML = `<td colspan="3" style="padding-top:18px;border-bottom:none;"><span class="eyebrow" style="margin-bottom:0;">${item.group}</span></td>`;
+        body.appendChild(groupRow);
+      }
+      const val = values[item.id];
+      const tagHtml = item.tag ? `<span class="tag ${item.tag==='A' ? 'optA' : 'optB'}">Opção ${item.tag}</span> ` : '';
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${tagHtml}${item.label}${item.note ? `<span class="note" style="display:block;color:var(--text-dim);font-size:12.5px;">${item.note}</span>` : ''}</td>
+        <td><input type="number" class="cost-input mono" data-id="${item.id}" placeholder="ex: 80" value="${val !== undefined && val !== null ? val : ''}"></td>
+        <td class="mono per-casal" data-for="${item.id}">&mdash;</td>
+      `;
+      body.appendChild(tr);
+    });
+    body.querySelectorAll('.cost-input').forEach(inp=>{
+      inp.addEventListener('change', e=>{
+        const id = e.target.dataset.id;
+        const num = e.target.value === '' ? null : parseFloat(e.target.value);
+        if(db) db.ref('costs/' + id).set(num).catch(console.error);
+        else { localStorage.setItem('gt-cost-' + id, num === null ? '' : String(num)); recomputeTotalsLocal(); }
+      });
+    });
+    recomputeTotals(values);
+  }
+  function recomputeTotals(values){
+    let totalGrupo = 0;
+    COST_ITEMS.forEach(item=>{
+      const val = values[item.id];
+      const num = (val === undefined || val === null || val === '') ? 0 : parseFloat(val);
+      const perCasalEl = document.querySelector(`.per-casal[data-for="${item.id}"]`);
+      if(perCasalEl) perCasalEl.textContent = num ? ('US$ ' + (num/2).toFixed(0)) : '—';
+      totalGrupo += num || 0;
+    });
+    document.getElementById('total-grupo').textContent = 'US$ ' + totalGrupo.toFixed(0);
+    document.getElementById('total-casal').textContent = 'US$ ' + (totalGrupo/2).toFixed(0);
+  }
+  function recomputeTotalsLocal(){
+    const values = {};
+    COST_ITEMS.forEach(item=> values[item.id] = localStorage.getItem('gt-cost-' + item.id) || '');
+    recomputeTotals(values);
+  }
+  function initCosts(){
+    if(db){
+      db.ref('costs').on('value', snap=>{
+        const active = document.activeElement;
+        const activeId = active && active.classList.contains('cost-input') ? active.dataset.id : null;
+        const values = snap.val() || {};
+        if(!activeId) renderCostTable(values);
+        else recomputeTotals(values);
+      }, console.error);
+    } else {
+      const values = {};
+      COST_ITEMS.forEach(item=> values[item.id] = localStorage.getItem('gt-cost-' + item.id) || '');
+      renderCostTable(values);
+    }
+  }
+
+  // ---------- Comments ----------
+  function renderComments(list){
+    const el = document.getElementById('comments-list');
+    if(!list.length){ el.innerHTML = '<p class="subtle-note">Nenhum comentário ainda — seja o primeiro.</p>'; return; }
+    el.innerHTML = list.map(c => `
+      <div class="comment-item">
+        <div class="meta"><span class="avatar-tag">${c.name}</span>${c.dateStr || ''}</div>
+        <div class="text"></div>
+      </div>`).join('');
+    // set text via textContent to avoid HTML injection
+    const items = el.querySelectorAll('.comment-item .text');
+    items.forEach((div, i)=> div.textContent = list[i].text);
+  }
+  function initComments(){
+    const submitBtn = document.getElementById('comment-submit');
+    submitBtn.addEventListener('click', ()=>{
+      const author = document.getElementById('comment-author').value;
+      const textEl = document.getElementById('comment-text');
+      const text = textEl.value.trim();
+      if(!text) return;
+      const entry = {name: author, text: text, ts: Date.now()};
+      if(db){
+        db.ref('comments').push(entry).catch(console.error);
+      } else {
+        const key = 'gt-comments';
+        const list = JSON.parse(localStorage.getItem(key) || '[]');
+        list.push(entry);
+        localStorage.setItem(key, JSON.stringify(list));
+        loadCommentsLocal();
+      }
+      textEl.value = '';
+    });
+    if(db){
+      db.ref('comments').on('value', snap=>{
+        const val = snap.val() || {};
+        const list = Object.values(val).sort((a,b)=>a.ts-b.ts).map(c=>({
+          name:c.name, text:c.text, dateStr: new Date(c.ts).toLocaleString('pt-BR', {day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'})
+        }));
+        renderComments(list);
+      }, console.error);
+    } else {
+      loadCommentsLocal();
+    }
+  }
+  function loadCommentsLocal(){
+    const list = JSON.parse(localStorage.getItem('gt-comments') || '[]').sort((a,b)=>a.ts-b.ts).map(c=>({
+      name:c.name, text:c.text, dateStr: new Date(c.ts).toLocaleString('pt-BR', {day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) + ' (local)'
+    }));
+    renderComments(list);
+  }
+
+  initChecklist();
+  initDocs();
+  initVoting();
+  initCosts();
+  initComments();
+</script>
+</body>
+</html>
