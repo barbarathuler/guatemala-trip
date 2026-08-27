@@ -206,22 +206,22 @@
 
       <svg class="route-svg" viewBox="0 0 760 90" fill="none" xmlns="http://www.w3.org/2000/svg">
         <line x1="30" y1="45" x2="730" y2="45" stroke="#d8cdb2" stroke-width="2" stroke-dasharray="1,7" stroke-linecap="round"/>
-        <circle cx="30" cy="45" r="5" fill="#9c701d"/>
-        <text x="30" y="70" fill="#8a7f6c" font-size="12" text-anchor="middle" font-family="Georgia, serif">Antígua</text>
-        <circle cx="220" cy="45" r="5" fill="#1f7268"/>
-        <text x="220" y="70" fill="#8a7f6c" font-size="12" text-anchor="middle" font-family="Georgia, serif">Atitlán</text>
+        <circle cx="30" cy="45" r="5" fill="#1f7268"/>
+        <text x="30" y="70" fill="#8a7f6c" font-size="12" text-anchor="middle" font-family="Georgia, serif">Atitlán</text>
+        <circle cx="220" cy="45" r="5" fill="#9c701d"/>
+        <text x="220" y="70" fill="#8a7f6c" font-size="12" text-anchor="middle" font-family="Georgia, serif">Antígua</text>
         <circle class="pulse" cx="410" cy="45" r="5" fill="#c2501f"/>
         <text x="410" y="70" fill="#8a7f6c" font-size="12" text-anchor="middle" font-family="Georgia, serif">Acatenango</text>
         <circle cx="600" cy="45" r="5" fill="#9c701d"/>
         <text x="600" y="70" fill="#8a7f6c" font-size="12" text-anchor="middle" font-family="Georgia, serif">Antígua (Réveillon)</text>
         <circle cx="730" cy="45" r="5" fill="#1f7268"/>
-        <text x="730" y="70" fill="#8a7f6c" font-size="12" text-anchor="middle" font-family="Georgia, serif">Tikal / Semuc</text>
+        <text x="730" y="70" fill="#8a7f6c" font-size="12" text-anchor="middle" font-family="Georgia, serif">Tikal</text>
       </svg>
 
-      <p class="lead">Chegada 01:40h (26/12) &middot; Embarque de volta 07:19h (05/01). Ritmo equilibrado, misturando natureza/aventura e cultura maia, sem abrir mão do Acatenango nem do Réveillon em Antígua.</p>
+      <p class="lead">Chegada 01:40h (26/12) &middot; Embarque de volta 07:19h (05/01). Direto do aeroporto para o Lago Atitlán, depois Antígua, Acatenango, Réveillon e Tikal.</p>
 
       <div class="status-banner">
-        <b>Decisão pendente:</b> Opção A (Tikal completo) vs Opção B (com Semuc Champey). Ver comparativo na aba <a href="#roteiro">Roteiro</a>. Acatenango confirmado para 29&ndash;30/12, operadora ainda em cotação.
+        <b>Roteiro fechado.</b> Falta confirmar a operadora do Acatenango (29&ndash;30/12) e fechar as reservas de hotel/transfer.
       </div>
 
       <div class="card" style="margin-top:20px;">
@@ -239,75 +239,32 @@
     <section id="roteiro">
       <div class="eyebrow">Itinerário</div>
       <h2>Roteiro dia a dia</h2>
-      <p>Os primeiros 6 dias são idênticos nas duas opções. A partir de 1º de janeiro elas se separam.</p>
-
-      <div class="card" id="vote-card">
-        <h3 style="font-size:15px;color:var(--text);margin-bottom:10px;">Votação do grupo &mdash; qual roteiro?</h3>
-        <div style="display:flex;gap:8px;margin-bottom:12px;align-items:center;flex-wrap:wrap;">
-          <label style="font-size:13.5px;color:var(--text-dim);">Quem está votando:</label>
-          <select id="vote-person-select"></select>
-        </div>
-        <div style="display:flex;gap:10px;margin-bottom:14px;">
-          <button id="vote-a" class="vote-btn">Voto Opção A</button>
-          <button id="vote-b" class="vote-btn">Voto Opção B</button>
-        </div>
-        <div id="vote-tally" class="mono" style="font-size:14px;color:var(--text-dim);">Carregando votos...</div>
-        <div id="vote-names" style="margin-top:8px;font-size:13.5px;color:var(--text-dim);"></div>
-        <p class="subtle-note" style="margin-top:8px;">Cada pessoa vota uma vez (escolhendo o próprio nome acima). Votar de novo troca seu voto anterior.</p>
-        <button id="vote-reset" style="margin-top:12px;background:none;border:1px solid var(--line);color:var(--text-dim);font-size:12.5px;padding:6px 12px;border-radius:14px;cursor:pointer;">Zerar votos do grupo</button>
-      </div>
-
-      <div class="toggle">
-        <button class="opt-btn active" data-opt="a"><b>Opção A</b>Tikal completo, com dia de buffer antes do voo</button>
-        <button class="opt-btn" data-opt="b"><b>Opção B</b>Com Semuc Champey, Tikal em meio dia</button>
-      </div>
+      <p>Roteiro final — 10 noites, do aeroporto direto ao lago, passando por Antígua, Acatenango, Réveillon e Tikal.</p>
 
       <div class="card">
         <table>
           <tr><th>Data</th><th>Base</th><th>O que rola</th></tr>
-          <tr><td class="mono">26/12 Sáb</td><td>Antígua</td><td>Chegada 01:40h, traslado, descanso, tarde leve na cidade colonial.</td></tr>
-          <tr><td class="mono">27/12 Dom</td><td>Atitlán</td><td>Manhã: mercado de Chichicastenango. Tarde: viagem ao lago, chegada ao pôr do sol.</td></tr>
-          <tr><td class="mono">28/12 Seg</td><td>Atitlán</td><td>Lancha pelos povoados: San Juan La Laguna, San Pedro, Santiago Atitlán.</td></tr>
-          <tr><td class="mono">29/12 Ter</td><td>Acatenango</td><td>Manhã: retorno a Antígua (~3h). Tarde: subida do vulcão, acampamento à noite.</td></tr>
-          <tr><td class="mono">30/12 Qua</td><td>Antígua</td><td>Nascer do sol no cume, descida, banho quente, tarde 100% de descanso.</td></tr>
-          <tr><td class="mono">31/12 Qui</td><td>Antígua</td><td>Dia leve (fazenda de café, compras) + <b>Réveillon em Antígua</b> à noite.</td></tr>
+          <tr><td class="mono">26/12 Sáb</td><td>Atitlán</td><td>Chegada 01:40h no aeroporto GUA, transfer direto ao lago (~3-3,5h), chegada de madrugada, descanso, tarde livre.</td></tr>
+          <tr><td class="mono">27/12 Dom</td><td>Atitlán</td><td>Day trip ao mercado de Chichicastenango (dia de mercado) e volta ao Atitlán.</td></tr>
+          <tr><td class="mono">28/12 Seg</td><td>Atitlán</td><td>Manhã: trilha Nariz do Índio ao nascer do sol (opcional). Tarde: lancha pelos povoados — San Juan La Laguna, San Pedro, Santiago Atitlán.</td></tr>
+          <tr><td class="mono">29/12 Ter</td><td>Antígua</td><td>Transfer de volta do lago (~3h), chegada à tarde/noite.</td></tr>
+          <tr><td class="mono">30/12 Qua</td><td>Acatenango</td><td>Saída de Antígua entre 6h30-8h, subida ao longo do dia, acampamento à noite.</td></tr>
+          <tr><td class="mono">31/12 Qui</td><td>Antígua</td><td>Manhã: nascer do sol no cume, descida, banho quente, descanso. Noite: <b>Réveillon em Antígua</b>.</td></tr>
+          <tr><td class="mono">01/01 Sex</td><td>Antígua</td><td>Dia extra de recuperação pós-festa — compras, o que ficou de fora.</td></tr>
+          <tr><td class="mono">02/01 Sáb</td><td>Flores/Tikal</td><td>Voo doméstico GUA → Flores à tarde, chegada à noite.</td></tr>
+          <tr><td class="mono">03/01 Dom</td><td>Flores/Tikal</td><td>Nascer do sol no Templo IV + exploração completa do parque, dia todo.</td></tr>
+          <tr><td class="mono">04/01 Seg</td><td>Cid. Guatemala</td><td>Manhã: Yaxhá (passeio opcional). Tarde: voo Flores → GUA, chegada à noite, pernoite perto do aeroporto.</td></tr>
+          <tr><td class="mono">05/01 Ter</td><td>&mdash;</td><td>Embarque 07:19h.</td></tr>
         </table>
       </div>
-
-      <div class="roteiro-panel active" id="panel-a">
-        <div class="card">
-          <table>
-            <tr><th>Data</th><th>Base</th><th>O que rola</th></tr>
-            <tr><td class="mono">01/01 Sex</td><td>Flores/Tikal</td><td>Manhã livre em Antígua (pós-festa). Voo doméstico à tarde para Flores.</td></tr>
-            <tr><td class="mono">02/01 Sáb</td><td>Flores/Tikal</td><td>Dia completo em Tikal &mdash; nascer do sol no Templo IV + exploração total do parque.</td></tr>
-            <tr><td class="mono">03/01 Dom</td><td>Cid. Guatemala</td><td>Manhã opcional: Yaxhá ou lago Petén Itzá. Voo de volta à tarde/noite.</td></tr>
-            <tr><td class="mono">04/01 Seg</td><td>Cid. Guatemala</td><td>Dia de folga/buffer perto do aeroporto (ou city tour rápido).</td></tr>
-            <tr><td class="mono">05/01 Ter</td><td>&mdash;</td><td>Embarque 07:19h.</td></tr>
-          </table>
-        </div>
-        <p class="subtle-note">Ganha: Tikal sem pressa + dia de buffer antes do voo. Perde: as piscinas de Semuc Champey ficam de fora.</p>
-      </div>
-
-      <div class="roteiro-panel" id="panel-b">
-        <div class="card">
-          <table>
-            <tr><th>Data</th><th>Base</th><th>O que rola</th></tr>
-            <tr><td class="mono">01/01 Sex</td><td>Semuc Champey</td><td>Viagem por estrada Antígua → Lanquín (~5-6h). Chegada à tarde/noite.</td></tr>
-            <tr><td class="mono">02/01 Sáb</td><td>Semuc Champey</td><td>Dia inteiro: piscinas turquesa, mirante, tubing/grutas.</td></tr>
-            <tr><td class="mono">03/01 Dom</td><td>Flores</td><td>Viagem por estrada Lanquín → Flores (~5-6h).</td></tr>
-            <tr><td class="mono">04/01 Seg</td><td>Cid. Guatemala</td><td>Madrugada: Tikal (nascer do sol + templos principais, ~5h). Voo Flores→Guatemala à tarde, pernoite perto do aeroporto.</td></tr>
-            <tr><td class="mono">05/01 Ter</td><td>&mdash;</td><td>Embarque 07:19h.</td></tr>
-          </table>
-        </div>
-        <p class="subtle-note">Ganha: 2 dias completos no Semuc Champey. Perde: Tikal vira meio-dia corrido, sem dia de buffer antes do voo, e dois trajetos longos de estrada seguidos.</p>
-      </div>
+      <p class="subtle-note">Total: 3 noites em Atitlán, 1 em Antígua (pré-Acatenango), 1 no acampamento, 2 em Antígua (pós-Réveillon), 2 em Flores/Tikal, 1 pernoite final perto do aeroporto.</p>
     </section>
 
     <!-- ===================== CUSTOS ===================== -->
     <section id="custos">
       <div class="eyebrow">Orçamento</div>
       <h2>Custos da viagem</h2>
-      <p>Preencha o campo "custo total (grupo)" conforme forem fechando cada item — qualquer um dos 4 pode editar, e o total por casal é calculado sozinho. Itens marcados <span class="tag optA">Opção A</span> ou <span class="tag optB">Opção B</span> só valem se aquele roteiro for o escolhido — não contem os dois ao mesmo tempo na hora de decidir o orçamento final. Passagens internacionais ficam de fora, já que cada um comprou a sua separadamente.</p>
+      <p>Preencha o campo "custo total (grupo)" conforme forem fechando cada item — qualquer um dos 4 pode editar, e o total por casal é calculado sozinho. Passagens internacionais ficam de fora, já que cada um comprou a sua separadamente.</p>
 
       <div class="card">
         <table>
@@ -330,7 +287,14 @@
 
       <div class="grid-2">
         <div class="card">
-          <h3 style="font-size:16px;color:var(--text);">Antígua (5 noites)</h3>
+          <h3 style="font-size:16px;color:var(--text);">Lago Atitlán (3 noites)</h3>
+          <ul class="plain">
+            <li>Hotel Atitlán (Panajachel) &mdash; hacienda à beira do lago, acesso fácil por estrada direto do aeroporto</li>
+            <li>Alternativa em San Marcos La Laguna se topam traslado de lancha</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="font-size:16px;color:var(--text);">Antígua (3 noites, com pausa do Acatenango)</h3>
           <ul class="plain">
             <li>Hotel Museo Spa Casa Santo Domingo &mdash; icônico, spa completo (mas reviews recentes de serviço em queda)</li>
             <li>Meson Panza Verde &mdash; boutique, charme colonial</li>
@@ -339,33 +303,19 @@
           </ul>
         </div>
         <div class="card">
-          <h3 style="font-size:16px;color:var(--text);">Lago Atitlán (2 noites)</h3>
-          <ul class="plain">
-            <li>Hotel Atitlán (Panajachel) &mdash; hacienda à beira do lago, acesso fácil por estrada</li>
-            <li>Alternativa em San Marcos La Laguna se topam traslado de lancha</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3 style="font-size:16px;color:var(--text);">Flores / Tikal</h3>
+          <h3 style="font-size:16px;color:var(--text);">Flores / Tikal (2 noites)</h3>
           <ul class="plain">
             <li>Jungle Lodge Hotel &mdash; dentro do parque, essencial para o nascer do sol sem madrugar em transfer</li>
             <li>Hotel Tikal Inn &mdash; alternativa dentro do parque</li>
           </ul>
         </div>
         <div class="card">
-          <h3 style="font-size:16px;color:var(--text);">Lanquín (Opção B, 2 noites)</h3>
+          <h3 style="font-size:16px;color:var(--text);">Cidade da Guatemala (pernoite antes do voo)</h3>
           <ul class="plain">
-            <li>Utopia Eco Hotel &mdash; vista pro rio, acesso a pé às piscinas</li>
-            <li>Zephyr Lodge &mdash; bem avaliado, mesma região</li>
+            <li>Hilton Garden Inn Guatemala City &mdash; 5-10min do aeroporto La Aurora</li>
+            <li>Barceló Guatemala City &mdash; mesma região</li>
           </ul>
         </div>
-      </div>
-      <div class="card" style="margin-top:16px;">
-        <h3 style="font-size:16px;color:var(--text);">Cidade da Guatemala (pernoite antes do voo)</h3>
-        <ul class="plain">
-          <li>Hilton Garden Inn Guatemala City &mdash; 5-10min do aeroporto La Aurora</li>
-          <li>Barceló Guatemala City &mdash; mesma região</li>
-        </ul>
       </div>
     </section>
 
@@ -396,7 +346,7 @@
           <li>Protetor solar, chapéu/boné e óculos de sol (altitude + sol forte de dia)</li>
           <li>Roupa leve para o restante da viagem (calor em Antígua, Atitlán, Tikal)</li>
           <li>Dinheiro vivo em Quetzales para mercados e vans</li>
-          <li>Repelente (mais importante em Tikal/Petén e Semuc Champey)</li>
+          <li>Repelente (mais importante em Tikal/Petén)</li>
           <li>Power bank e adaptador de tomada se necessário</li>
         </ul>
       </div>
@@ -501,16 +451,6 @@
     el.textContent = days > 0 ? `Faltam ${days} dias para a viagem` : (days === 0 ? 'É hoje!' : 'Viagem já em andamento ou concluída');
   })();
 
-  // Roteiro toggle
-  document.querySelectorAll('.opt-btn').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      document.querySelectorAll('.opt-btn').forEach(b=>b.classList.remove('active'));
-      btn.classList.add('active');
-      document.querySelectorAll('.roteiro-panel').forEach(p=>p.classList.remove('active'));
-      document.getElementById('panel-' + btn.dataset.opt).classList.add('active');
-    });
-  });
-
   // ============================================================
   // COLE AQUI AS CHAVES DO SEU PROJETO FIREBASE (passo 5 do setup)
   // ============================================================
@@ -562,13 +502,11 @@
 
   // ---------- Group bookings checklist ----------
   const CHECKLIST_ITEMS = [
-    {id:'c6', label:'Decidir Opção A vs B com o outro casal'},
     {id:'c7', label:'Fechar operadora do Acatenango', note:'OX Expeditions ou Trek Guatemala — aguardando resposta de disponibilidade'},
     {id:'c8', label:'Reservar hotel do Réveillon em Antígua', note:'Lota rápido na alta temporada'},
     {id:'c9', label:'Reservar voo doméstico GUA ⇄ Flores', note:'tagairlines.com ou Avianca'},
-    {id:'c9b', label:'Reservar voos internacionais BR ⇄ Guatemala'},
-    {id:'c10', label:'Confirmar transfers com Atitrans / GuateGo / Tikal Expedition'},
-    {id:'c11', label:'Reservar hotéis (Antígua, Atitlán, Flores/Tikal, Cidade da Guatemala)'},
+    {id:'c10', label:'Confirmar transfers com Atitrans'},
+    {id:'c11', label:'Reservar hotéis (Atitlán, Antígua, Flores/Tikal, Cidade da Guatemala)'},
     {id:'c12', label:'Reservar jantar de Réveillon (Café Sky ou Hotel Soleil Antigua)'},
     {id:'c13', label:'Verificar situação do "Estado de Prevenção" mais perto da data'},
   ];
@@ -651,72 +589,22 @@
     }
   }
 
-  // ---------- Voting ----------
-  const voteSelect = document.getElementById('vote-person-select');
-  voteSelect.innerHTML = PEOPLE.map(p=>`<option value="${p.key}">${p.name}</option>`).join('');
-  const savedName = localStorage.getItem('gt-my-name');
-  if(savedName) voteSelect.value = savedName;
-  voteSelect.addEventListener('change', ()=> localStorage.setItem('gt-my-name', voteSelect.value));
-
-  function castVote(choice){
-    const personKey = voteSelect.value;
-    if(db) db.ref('votes/' + personKey).set(choice).catch(console.error);
-    else { localStorage.setItem('gt-vote-' + personKey, choice); renderVoteFallback(); }
-  }
-  function renderVoteFallback(){
-    let a = [], b = [];
-    PEOPLE.forEach(p=>{
-      const v = localStorage.getItem('gt-vote-' + p.key);
-      if(v === 'a') a.push(p.name);
-      if(v === 'b') b.push(p.name);
-    });
-    document.getElementById('vote-tally').textContent = `Opção A: ${a.length} voto(s)  ·  Opção B: ${b.length} voto(s)`;
-    document.getElementById('vote-names').innerHTML = `<b>A:</b> ${a.join(', ') || '—'} &nbsp;&nbsp; <b>B:</b> ${b.join(', ') || '—'}`;
-  }
-  function initVoting(){
-    if(db){
-      db.ref('votes').on('value', snap=>{
-        const votes = snap.val() || {};
-        let a = [], b = [];
-        PEOPLE.forEach(p=>{
-          const v = votes[p.key];
-          if(v === 'a') a.push(p.name);
-          if(v === 'b') b.push(p.name);
-        });
-        document.getElementById('vote-tally').textContent = `Opção A: ${a.length} voto(s)  ·  Opção B: ${b.length} voto(s)`;
-        document.getElementById('vote-names').innerHTML = `<b>A:</b> ${a.join(', ') || '—'} &nbsp;&nbsp; <b>B:</b> ${b.join(', ') || '—'}`;
-      }, err=>{ document.getElementById('vote-tally').textContent = 'Erro: ' + err.message; });
-    } else renderVoteFallback();
-  }
-  document.getElementById('vote-a').addEventListener('click', ()=>castVote('a'));
-  document.getElementById('vote-b').addEventListener('click', ()=>castVote('b'));
-  document.getElementById('vote-reset').addEventListener('click', ()=>{
-    if(!confirm('Zerar todos os votos do grupo? Isso não pode ser desfeito.')) return;
-    if(db) db.ref('votes').remove().catch(console.error);
-    else { PEOPLE.forEach(p=> localStorage.removeItem('gt-vote-' + p.key)); renderVoteFallback(); }
-  });
-
   // ---------- Costs ----------
   const COST_ITEMS = [
     {id:'acatenango', label:'Acatenango (operadora escolhida)', note:'OX ~US$476 ou Trek Guatemala ~US$916 (grupo)', group:'Passeios'},
     {id:'lancha_atitlan', label:'Lancha pelos povoados do Atitlán', note:'San Juan La Laguna, San Pedro, Santiago Atitlán', group:'Passeios'},
-    {id:'ingressos', label:'Ingressos e taxas de parques', note:'Tikal ~US$20-30pp, Semuc ~US$5pp', group:'Passeios'},
+    {id:'ingressos', label:'Ingressos e taxas de parques', note:'Tikal ~US$20-30pp, Yaxhá ~US$10pp', group:'Passeios'},
     {id:'reveillon_jantar', label:'Jantar de Réveillon', note:'Café Sky ou Hotel Soleil Antigua', group:'Passeios'},
-    {id:'yaxha', label:'Yaxhá (passeio opcional)', tag:'A', group:'Passeios'},
+    {id:'yaxha', label:'Yaxhá (passeio opcional, 04/01)', group:'Passeios'},
 
     {id:'voo_domestico', label:'Voos domésticos GUA ⇄ Flores (4 pax)', note:'US$92–193/trecho, ida+volta', group:'Logística'},
-    {id:'transfer_gua_antigua', label:'Transfer: Aeroporto GUA → Antígua', group:'Logística'},
-    {id:'transfer_antigua_atitlan', label:'Transfer: Antígua → Chichicastenango → Atitlán', group:'Logística'},
+    {id:'transfer_gua_atitlan', label:'Transfer: Aeroporto GUA → Atitlán (direto)', group:'Logística'},
     {id:'transfer_atitlan_antigua', label:'Transfer: Atitlán → Antígua', group:'Logística'},
-    {id:'transfer_b_antigua_lanquin', label:'Transfer: Antígua → Lanquín', tag:'B', group:'Logística'},
-    {id:'transfer_b_lanquin_flores', label:'Transfer: Lanquín → Flores', tag:'B', group:'Logística'},
-    {id:'transfer_a_antigua_gua', label:'Transfer: Antígua → Aeroporto GUA + pernoite', tag:'A', group:'Logística'},
+    {id:'transfer_antigua_gua', label:'Transfer: Antígua → Aeroporto GUA + pernoite', group:'Logística'},
 
-    {id:'hotel_antigua', label:'Hotel Antígua (5 noites, 2 casais)', group:'Hospedagem'},
-    {id:'hotel_atitlan', label:'Hotel Atitlán (2 noites, 2 casais)', group:'Hospedagem'},
-    {id:'hotel_flores_a', label:'Hotel Flores/Tikal (2 noites)', tag:'A', group:'Hospedagem'},
-    {id:'hotel_flores_b', label:'Hotel Flores/Tikal (1 noite)', tag:'B', group:'Hospedagem'},
-    {id:'hotel_lanquin', label:'Hotel Lanquín (2 noites)', tag:'B', group:'Hospedagem'},
+    {id:'hotel_atitlan', label:'Hotel Atitlán (3 noites, 2 casais)', group:'Hospedagem'},
+    {id:'hotel_antigua', label:'Hotel Antígua (3 noites, com pausa do Acatenango)', group:'Hospedagem'},
+    {id:'hotel_flores', label:'Hotel Flores/Tikal (2 noites)', group:'Hospedagem'},
     {id:'hotel_gua_city', label:'Hotel Cidade da Guatemala (pernoite aeroporto)', group:'Hospedagem'},
 
     {id:'seguro', label:'Seguro viagem (4 pessoas)', group:'Outros'},
@@ -839,10 +727,8 @@
     renderComments(list);
   }
 
-  
   initChecklist();
   initDocs();
-  initVoting();
   initCosts();
   initComments();
 </script>
